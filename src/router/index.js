@@ -4,7 +4,12 @@ import VueRouter from 'vue-router'
 =======
 import Login from '@/components/Login'
 import Home from '@/components/Home'
+<<<<<<< HEAD
 >>>>>>> login
+=======
+import Welcome from '@/components/Welcome'
+import Users from '@/components/Users'
+>>>>>>> user
 
 Vue.use(VueRouter)
 
@@ -14,7 +19,6 @@ const routes = [
 =======
   {
     path: '/',
-    // 默认打开
     redirect: '/login'
   },
   {
@@ -26,7 +30,19 @@ const routes = [
     path: '/home',
     name: 'Home',
     component: Home,
-    children: []
+    redirect: '/welcome',
+    children: [
+      {
+        path: '/welcome',
+        name: 'Welcome',
+        component: Welcome
+      },
+      {
+        path: '/users',
+        name: 'Users',
+        component: Users
+      }
+    ]
   }
 >>>>>>> login
 ]
