@@ -80,7 +80,6 @@ export default {
                 return this.$message.error(`${result.msg}`)
             }
             this.menuList = result.data
-            console.log(this.menuList);
         },
         // 点击和收缩侧边栏
         toggle_change() {

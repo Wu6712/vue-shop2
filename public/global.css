@@ -2,6 +2,7 @@
 html,
 body,
 #app {
+    min-width: 1366px;
     height: 100%;
     padding: 0;
     margin: 0;
