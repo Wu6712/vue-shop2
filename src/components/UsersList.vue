@@ -70,7 +70,7 @@
       width="50%" 
       @close="setRightDialogClosed">
       <el-tree 
-        :data="rightsList" 
+        :data="rightsList"
         :props="treeProps" 
         show-checkbox 
         node-key="id" 
