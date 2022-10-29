@@ -23,6 +23,19 @@ Vue.use(ElementUI);
 
 Vue.config.productionTip = false
 
+// 全局过滤器
+Vue.filter('dateFormat', originVal => {
+  const dt = new Date(originVal)
+  const y = dt.getFullYear()
+  const M = (dt.getMonth() + '').padStart(2, '0')
+  const d =  (dt.getDate() + '').padStart(2, '0')
+  const hh = (dt.getHours() + '').padStart(2, '0')
+  const mm = (dt.getMinutes() + '').padStart(2, '0')
+  const ss = (dt.getSeconds() + '').padStart(2, '0')
+
+  return `${y}-${M}-${d} ${hh}:${mm}:${ss}`
+})
+
 new Vue({
   router,
   store,
